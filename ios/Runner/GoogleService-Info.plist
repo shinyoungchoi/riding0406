@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>531553415274-p5gks1a4edmh2lta59ji5nggqubu42on.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.531553415274-p5gks1a4edmh2lta59ji5nggqubu42on</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>531553415274-rup4jporv6jhc21po6u5okptdvgltr70.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAddJ-lE172wQhIVun3a5eVCpaKdCY1DAQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>531553415274</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gauri.moto</string>
+	<key>PROJECT_ID</key>
+	<string>riding-6923c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>riding-6923c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:531553415274:ios:241f0d5e761850b87b5a13</string>
+</dict>
+</plist>

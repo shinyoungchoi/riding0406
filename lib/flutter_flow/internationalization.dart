@@ -1,0 +1,878 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+
+class FFLocalizations {
+  FFLocalizations(this.locale);
+
+  final Locale locale;
+
+  static FFLocalizations of(BuildContext context) =>
+      Localizations.of<FFLocalizations>(context, FFLocalizations);
+
+  static List<String> languages() => ['ko', 'en'];
+
+  String get languageCode => locale.languageCode;
+  int get languageIndex => languages().contains(languageCode)
+      ? languages().indexOf(languageCode)
+      : 0;
+
+  String getText(String key) =>
+      (kTranslationsMap[key] ?? {})[locale.languageCode] ?? '';
+
+  String getVariableText({
+    String koText = '',
+    String enText = '',
+  }) =>
+      [koText, enText][languageIndex] ?? '';
+}
+
+class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
+  const FFLocalizationsDelegate();
+
+  @override
+  bool isSupported(Locale locale) =>
+      FFLocalizations.languages().contains(locale.languageCode);
+
+  @override
+  Future<FFLocalizations> load(Locale locale) =>
+      SynchronousFuture<FFLocalizations>(FFLocalizations(locale));
+
+  @override
+  bool shouldReload(FFLocalizationsDelegate old) => false;
+}
+
+final kTranslationsMap = <Map<String, Map<String, String>>>[
+  // onboard
+  {
+    '745uk7q2': {
+      'ko': 'Welcome to Flutterflow',
+      'en': '',
+    },
+    'lz0xvqia': {
+      'ko': 'Build Apps Effortlessly',
+      'en': '',
+    },
+  },
+  // onboard2
+  {
+    'qswhq0vo': {
+      'ko': 'Search for Books',
+      'en': '',
+    },
+    'kms8n0mp': {
+      'ko': 'Find amazing classic books in our library.',
+      'en': '',
+    },
+    'pyeiyl8k': {
+      'ko': 'Purchase Books',
+      'en': '',
+    },
+    '35jhpyxe': {
+      'ko': 'Buy and view all your favorite books you find in this library.',
+      'en': '',
+    },
+    't8sdsjd2': {
+      'ko': 'Review Purchases',
+      'en': '',
+    },
+    'mlzghf6q': {
+      'ko':
+          'Keep track of all your purchases that you have made, want to trade books in? Go ahead and list them for exchange.',
+      'en': '',
+    },
+    '6rxbgdez': {
+      'ko': 'Continue',
+      'en': '',
+    },
+  },
+  // login_step_screen
+  {
+    'qte7ics1': {
+      'ko': 'Login',
+      'en': 'Welcome to Bariny.',
+    },
+    '79ncmaka': {
+      'ko': '함꼐 라이딩할 준비가 되셨나요?',
+      'en': 'Ready to ride together?',
+    },
+    'tq11bjri': {
+      'ko': '또는',
+      'en': 'OR',
+    },
+    'd2m1wale': {
+      'ko': '바린이 가입',
+      'en': 'Sign up',
+    },
+    'jubs4laq': {
+      'ko': '바린이 로그인',
+      'en': 'Log in to Barin',
+    },
+    'o4pbrzul': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // login_screen
+  {
+    'zdfkxpxt': {
+      'ko': '로그인',
+      'en': 'Login',
+    },
+    '88ympw3k': {
+      'ko': 'Email을 입력해주세요',
+      'en': 'Please enter your email',
+    },
+    'o8es3oob': {
+      'ko': '패스워드를 입력해주세요.',
+      'en': 'password',
+    },
+    'dqcocszv': {
+      'ko': '비밀번호를 잊으셨나요?',
+      'en': 'Forgot Password?',
+    },
+    'yhpvr0om': {
+      'ko': '로그인',
+      'en': 'Login',
+    },
+    'veqdgxzm': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // createAccount
+  {
+    '2u0fd8ai': {
+      'ko': '함께 라이딩 떠나요!',
+      'en': 'Let&#39;s go riding together!',
+    },
+    '090iiors': {
+      'ko': 'Create your account below, or',
+      'en': 'Create your account below, or',
+    },
+    'o9hyp43k': {
+      'ko': 'Your email...',
+      'en': 'Your email...',
+    },
+    'nor2r18z': {
+      'ko': 'Password',
+      'en': 'Password',
+    },
+    'mexcuxjq': {
+      'ko': 'Create Account',
+      'en': 'Create Account',
+    },
+    '0jklhsqk': {
+      'ko': 'Continue as guest',
+      'en': 'Continue as guest',
+    },
+    'xswmmc3q': {
+      'ko': 'Password',
+      'en': 'Password',
+    },
+    'exrrmy1k': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // forgotPassword
+  {
+    'lz6i5gcs': {
+      'ko': '비밀번호 찾기',
+      'en': 'Forgot Password',
+    },
+    'lqe5f53g': {
+      'ko': '가입한 이메일을 입력해주세요.',
+      'en': 'Enter your email',
+    },
+    '23hdyh2t': {
+      'ko': '비밀번호 재설정을 위하여 기입하신 이메일로 링크가 첨부된 메일을 보내드립니다. ',
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
+    },
+    'sk6rsh4r': {
+      'ko': '재설정 링크 보내기',
+      'en': 'Send Reset Link',
+    },
+    '7sk8kb2v': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // profile_step1_screen
+  {
+    '0z2dvtsr': {
+      'ko': 'Dog Profile',
+      'en': 'Dog Profile',
+    },
+    'm49hsrtb': {
+      'ko': '1/2',
+      'en': '1/2',
+    },
+    'sfga0h32': {
+      'ko':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+      'en':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+    },
+    'k0dkgmnd': {
+      'ko': 'Dog Name',
+      'en': 'Dog Name',
+    },
+    'qzurhb5u': {
+      'ko': 'Dog Breed',
+      'en': 'Dog Breed',
+    },
+    'g6wtzsp6': {
+      'ko': 'Dog Age',
+      'en': 'Dog Age',
+    },
+    'aa4renl3': {
+      'ko': 'You can add multiple pups in your profile.',
+      'en': 'You can add multiple pups in your profile.',
+    },
+    'zlkia0xx': {
+      'ko': 'Skip',
+      'en': 'Skip',
+    },
+    'pmj0cxab': {
+      'ko': 'Save & Continue',
+      'en': 'Save &amp; Continue',
+    },
+    'h7neub4p': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // profile_step2_screen
+  {
+    'aey4wjk5': {
+      'ko': 'Dog Profile',
+      'en': 'Dog Profile',
+    },
+    'bp7zlos3': {
+      'ko': '1/2',
+      'en': '1/2',
+    },
+    'fhuwh23j': {
+      'ko':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+      'en':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+    },
+    'skcm4ayr': {
+      'ko': 'Dog Name',
+      'en': 'Dog Name',
+    },
+    'ge9b1ipv': {
+      'ko': 'Dog Breed',
+      'en': 'Dog Breed',
+    },
+    'jyjbs16s': {
+      'ko': 'Dog Age',
+      'en': 'Dog Age',
+    },
+    'ckxd2tci': {
+      'ko': 'You can add multiple pups in your profile.',
+      'en': 'You can add multiple pups in your profile.',
+    },
+    'hcaj8q6f': {
+      'ko': 'Skip',
+      'en': 'Skip',
+    },
+    'we8n9k2v': {
+      'ko': 'Save & Continue',
+      'en': 'Save &amp; Continue',
+    },
+    'q009s8ac': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // homePage
+  {
+    '15kgipc2': {
+      'ko': '@username',
+      'en': '@username',
+    },
+    '24u3bb6h': {
+      'ko': '2,493',
+      'en': '2,493',
+    },
+    'l39162ej': {
+      'ko': '4',
+      'en': '4',
+    },
+    'utzpv289': {
+      'ko':
+          'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
+      'en':
+          'I&#39;m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.',
+    },
+    'wu0tlooz': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // profilePage
+  {
+    'u7qzrdsn': {
+      'ko': 'Add a Dog',
+      'en': 'Add a Dog',
+    },
+    'f2bwd8hm': {
+      'ko': 'Settings',
+      'en': 'Settings',
+    },
+    'k7kyh4ow': {
+      'ko': 'Dog Profiles',
+      'en': 'Dog Profiles',
+    },
+    'pdqjr7kj': {
+      'ko': 'Posts',
+      'en': 'Posts',
+    },
+    'z7atpcj5': {
+      'ko': '@username',
+      'en': '@username',
+    },
+    '7cdc6wwq': {
+      'ko': '2,493',
+      'en': '2,493',
+    },
+    'y1knncp2': {
+      'ko': '4',
+      'en': '4',
+    },
+    '87elh1tl': {
+      'ko':
+          'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
+      'en':
+          'I&#39;m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.',
+    },
+    'kxt45dp4': {
+      'ko': 'Profile',
+      'en': 'Profile',
+    },
+  },
+  // createPost
+  {
+    'veb786ft': {
+      'ko': 'Create Post',
+      'en': 'Create Post',
+    },
+    'h7c383eh': {
+      'ko': 'Comment....',
+      'en': 'Comment....',
+    },
+    'd31eti1b': {
+      'ko': 'Location',
+      'en': 'Location',
+    },
+    'gt6et9ti': {
+      'ko': 'Create Post',
+      'en': 'Create Post',
+    },
+    '0wioan2h': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // createStory
+  {
+    'y6wy2na0': {
+      'ko': 'Comment....',
+      'en': 'Comment....',
+    },
+    'ddgkj2lc': {
+      'ko': 'Photo',
+      'en': 'Photo',
+    },
+    '8rgpw1mr': {
+      'ko': 'Video',
+      'en': 'Video',
+    },
+    'zwmkvtoz': {
+      'ko': 'Create Story',
+      'en': 'Create Story',
+    },
+    '65xq48hs': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // postDetails
+  {
+    'plfz031i': {
+      'ko': 'Comments',
+      'en': 'Comments',
+    },
+    'ud22kuml': {
+      'ko': 'Posted',
+      'en': 'Posted',
+    },
+    'hyofcbic': {
+      'ko': 'Comment here...',
+      'en': 'Comment here...',
+    },
+    '2yv83wzl': {
+      'ko': 'Post',
+      'en': 'Post',
+    },
+    'gn09qq1s': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // storyDetails
+  {
+    '4tmgokxs': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // editSettings
+  {
+    'uvburtiz': {
+      'ko': 'Account Settings',
+      'en': 'Account Settings',
+    },
+    'k1x2jsyl': {
+      'ko': 'Edit Profile',
+      'en': 'Edit Profile',
+    },
+    '5dqh11o4': {
+      'ko': 'Change Password',
+      'en': 'Change Password',
+    },
+    'vzwcb569': {
+      'ko': 'Log Out',
+      'en': 'Log Out',
+    },
+    'ziqv3ujx': {
+      'ko': 'Settings',
+      'en': 'Settings',
+    },
+    '86y72uwl': {
+      'ko': 'Profile',
+      'en': 'Profile',
+    },
+  },
+  // editUserProfile
+  {
+    '4zch4j6l': {
+      'ko': 'Your Profile',
+      'en': 'Your Profile',
+    },
+    '5jkvxlcp': {
+      'ko':
+          'Fill out your profile now in order to complete setup of your profile.',
+      'en':
+          'Fill out your profile now in order to complete setup of your profile.',
+    },
+    'kx75pzjt': {
+      'ko': 'Your Name',
+      'en': 'Your Name',
+    },
+    'jj9h1519': {
+      'ko': 'UserName',
+      'en': 'UserName',
+    },
+    '2l4348tm': {
+      'ko': 'Your Bio',
+      'en': 'Your Bio',
+    },
+    'pzn9qb6e': {
+      'ko': 'Save Changes',
+      'en': 'Save Changes',
+    },
+    'ns9x1dj5': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // editDogProfile
+  {
+    'o540b3cz': {
+      'ko': 'Dog Profile',
+      'en': 'Dog Profile',
+    },
+    'kczvjztj': {
+      'ko':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+      'en':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+    },
+    'xm2hpwvb': {
+      'ko': 'Dog Name',
+      'en': 'Dog Name',
+    },
+    'pr5ae8ta': {
+      'ko': 'Dog Breed',
+      'en': 'Dog Breed',
+    },
+    'xxom70gg': {
+      'ko': 'Dog Age',
+      'en': 'Dog Age',
+    },
+    'tzetssnh': {
+      'ko': 'Adding multiple pups is coming soon.',
+      'en': 'Adding multiple puffs is coming soon.',
+    },
+    'ozj9olbq': {
+      'ko': 'Save Changes',
+      'en': 'Save Changes',
+    },
+    'ysah1v35': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // changePassword
+  {
+    'v27pgtyj': {
+      'ko': 'Change Password',
+      'en': 'Change Password',
+    },
+    '30fanos0': {
+      'ko': 'Enter your email',
+      'en': 'Enter your email',
+    },
+    'q6mgysum': {
+      'ko':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
+    },
+    'frbqy926': {
+      'ko': 'Send Reset Link',
+      'en': 'Send Reset Link',
+    },
+    'ewkj119d': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // createDogProfile_New
+  {
+    'tzu035ig': {
+      'ko': 'Create Dog Profile',
+      'en': 'Create Dog Profile',
+    },
+    'a5m79u9t': {
+      'ko':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+      'en':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+    },
+    'egcdxco1': {
+      'ko': 'Dog Name',
+      'en': 'Dog Name',
+    },
+    'bvgrnkvp': {
+      'ko': 'Dog Breed',
+      'en': 'Dog Breed',
+    },
+    '0aweq1n2': {
+      'ko': 'Dog Age',
+      'en': 'Dog Age',
+    },
+    '6lseb3yz': {
+      'ko': 'Add Pup',
+      'en': 'Add Pup',
+    },
+    'hyigzp2x': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // viewProfilePageOther
+  {
+    '3vdsn8ke': {
+      'ko': 'Message',
+      'en': 'Message',
+    },
+    'vrx90a1o': {
+      'ko': 'Dog Profiles',
+      'en': 'Dog Profiles',
+    },
+    'jziw8qd6': {
+      'ko': 'Posts',
+      'en': 'Posts',
+    },
+    'rzm99rai': {
+      'ko': '@username',
+      'en': '@username',
+    },
+    'xg60wgp7': {
+      'ko': '2,493',
+      'en': '2,493',
+    },
+    'h9rzltzj': {
+      'ko': '4',
+      'en': '4',
+    },
+    'adqxm7wc': {
+      'ko':
+          'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
+      'en':
+          'I&#39;m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.',
+    },
+    'cmx58n7q': {
+      'ko': 'Profile',
+      'en': 'Profile',
+    },
+  },
+  // chatPage
+  {
+    'lcwlqikt': {
+      'ko': 'Group Chat',
+      'en': 'Group Chat',
+    },
+    '1y8g26eh': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // allChatsPage
+  {
+    'cow9tnpt': {
+      'ko': 'Messages',
+      'en': 'Messages',
+    },
+    '9nolezbs': {
+      'ko': 'Messages',
+      'en': 'Messages',
+    },
+  },
+  // addChatUsers
+  {
+    'mjlpzky8': {
+      'ko': 'Add Friends to chat',
+      'en': 'Add Friends to chat',
+    },
+    '9hip8h8m': {
+      'ko': 'Select the friends to add to chat.',
+      'en': 'Select the friends to add to chat.',
+    },
+    'xd1609ip': {
+      'ko': 'Search for friends...',
+      'en': 'Search for friends...',
+    },
+    '8gb2sonj': {
+      'ko': 'Invite to Chat',
+      'en': 'Invite to Chat',
+    },
+    'vkzz0ys1': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // createGroupChat
+  {
+    'hubgvr3a': {
+      'ko': 'Create Group Chat',
+      'en': 'Create Group Chat',
+    },
+    '6p5wc7rc': {
+      'ko': 'Select the friends to add to chat.',
+      'en': 'Select the friends to add to chat.',
+    },
+    '8os5xft9': {
+      'ko': 'Search for friends...',
+      'en': 'Search for friends...',
+    },
+    'llae2zjw': {
+      'ko': 'Create Chat',
+      'en': 'Create Chat',
+    },
+    'lvrw9xiv': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // phone_sign_screen
+  {
+    '4zb8e69z': {
+      'ko': 'Phone Sign In',
+      'en': '',
+    },
+    '3q6sncw7': {
+      'ko': 'Sign In with Phone',
+      'en': '',
+    },
+  },
+  // phone_verify_screen
+  {
+    '2yu1eo6k': {
+      'ko': 'Code Verification',
+      'en': '',
+    },
+    '52o8ol2a': {
+      'ko': 'Verify Code',
+      'en': '',
+    },
+  },
+  // comments
+  {
+    'q3qh0z3f': {
+      'ko': 'Comments',
+      'en': 'Comments',
+    },
+    '0svvwha5': {
+      'ko': 'Posted',
+      'en': 'Posted',
+    },
+    'iqit1b5s': {
+      'ko': 'Comment here...',
+      'en': 'Comment here...',
+    },
+    'dl8gozgg': {
+      'ko': 'Post',
+      'en': 'Post',
+    },
+  },
+  // createModal
+  {
+    'zb1q4uc6': {
+      'ko': 'Create Story',
+      'en': 'Create Story',
+    },
+    'h7m5cpss': {
+      'ko': 'Share a video of your pup.',
+      'en': 'Share a video of your pup.',
+    },
+    'cqa705ej': {
+      'ko': 'Create Post',
+      'en': 'Create Post',
+    },
+    'iddcrbyi': {
+      'ko': 'Share a photo that will appear in the timeline.',
+      'en': 'Share a photo that will appear in the timeline.',
+    },
+    '63m187v7': {
+      'ko': 'Create Post',
+      'en': 'Create Post',
+    },
+    'tj8p50cv': {
+      'ko': 'Share photos on your timeline.',
+      'en': 'Share photos on your timeline.',
+    },
+  },
+  // deletePost
+  {
+    'zypxboig': {
+      'ko': 'Delete Post',
+      'en': 'Delete Post',
+    },
+    '18hwmdc0': {
+      'ko': 'Cancel',
+      'en': 'Cancel',
+    },
+  },
+  // deleteStory
+  {
+    'kknvfazr': {
+      'ko': 'Delete Story',
+      'en': 'Delete Story',
+    },
+    '81zo4r88': {
+      'ko': 'Cancel',
+      'en': 'Cancel',
+    },
+  },
+  // Miscellaneous
+  {
+    'g4g4grp2': {
+      'ko': '',
+      'en': '',
+    },
+    'dexnl5yh': {
+      'ko': '',
+      'en': '',
+    },
+    'uydgnz0v': {
+      'ko': '',
+      'en': '',
+    },
+    'i79k1fgw': {
+      'ko': '',
+      'en': '',
+    },
+    'imxqtggq': {
+      'ko': '',
+      'en': '',
+    },
+    'e8knd4lh': {
+      'ko': '',
+      'en': '',
+    },
+    '3gktw0lk': {
+      'ko': '',
+      'en': '',
+    },
+    'j3ipuuz8': {
+      'ko': '',
+      'en': '',
+    },
+    'rt90iiw2': {
+      'ko': '',
+      'en': '',
+    },
+    'zjyoj70m': {
+      'ko': '',
+      'en': '',
+    },
+    'xbg48ptg': {
+      'ko': '',
+      'en': '',
+    },
+    'yyth6nw1': {
+      'ko': '',
+      'en': '',
+    },
+    'ujpxrgvi': {
+      'ko': '',
+      'en': '',
+    },
+    'lpjpttph': {
+      'ko': '',
+      'en': '',
+    },
+    '9b554h1l': {
+      'ko': '',
+      'en': '',
+    },
+    '118nb6gb': {
+      'ko': '',
+      'en': '',
+    },
+    'hofxbrtn': {
+      'ko': '',
+      'en': '',
+    },
+    'k5hu6int': {
+      'ko': '',
+      'en': '',
+    },
+    'kl3jc44t': {
+      'ko': '',
+      'en': '',
+    },
+    'v1d237gk': {
+      'ko': '',
+      'en': '',
+    },
+    'jfwkcmq2': {
+      'ko': '',
+      'en': '',
+    },
+    'z7ow254f': {
+      'ko': '',
+      'en': '',
+    },
+    'y9bicxqh': {
+      'ko': '',
+      'en': '',
+    },
+  },
+].reduce((a, b) => a..addAll(b));

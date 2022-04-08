@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "531553415274",
+    "project_id": "riding-6923c",
+    "storage_bucket": "riding-6923c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531553415274:android:0e51c0d979d05b327b5a13",
+        "android_client_info": {
+          "package_name": "com.gauri.moto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531553415274-rup4jporv6jhc21po6u5okptdvgltr70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gauri.moto",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "531553415274-h4qpi4vhd7ajkusb22ogt4809vnf49ib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFIjjdIchAS-OX9j88ijlSbhYHeley2A0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531553415274-h4qpi4vhd7ajkusb22ogt4809vnf49ib.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "531553415274-p5gks1a4edmh2lta59ji5nggqubu42on.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gauri.moto"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
