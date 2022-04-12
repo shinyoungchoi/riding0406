@@ -41,6 +41,10 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   bool get isFollowed;
 
   @nullable
+  @BuiltValueField(wireName: 'user_type')
+  String get userType;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -52,7 +56,8 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..phoneNumber = ''
     ..userName = ''
     ..bio = ''
-    ..isFollowed = false;
+    ..isFollowed = false
+    ..userType = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -85,6 +90,7 @@ Map<String, dynamic> createUsersRecordData({
   String userName,
   String bio,
   bool isFollowed,
+  String userType,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -97,4 +103,5 @@ Map<String, dynamic> createUsersRecordData({
           ..phoneNumber = phoneNumber
           ..userName = userName
           ..bio = bio
-          ..isFollowed = isFollowed));
+          ..isFollowed = isFollowed
+          ..userType = userType));

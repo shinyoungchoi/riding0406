@@ -8,7 +8,7 @@ import 'auth/auth_util.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:riding_social/login_step_screen/login_step_screen_widget.dart';
+import 'package:riding_social/login_step1/login_step1_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home_page/home_page_widget.dart';
 import 'profile_page/profile_page_widget.dart';
@@ -92,7 +92,7 @@ class _MyAppState extends State<MyApp> {
             )
           : currentUser.loggedIn
               ? NavBarPage()
-              : LoginStepScreenWidget(),
+              : LoginStep1Widget(),
     );
   }
 }

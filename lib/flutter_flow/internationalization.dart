@@ -44,48 +44,56 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboard
   {
-    '745uk7q2': {
+    '43jhgdnn': {
       'ko': 'Welcome to Flutterflow',
       'en': '',
     },
-    'lz0xvqia': {
+    'd1fzc4si': {
       'ko': 'Build Apps Effortlessly',
+      'en': '',
+    },
+    '5ank9p9f': {
+      'ko': 'Home',
       'en': '',
     },
   },
   // onboard2
   {
-    'qswhq0vo': {
+    'blr4nqv5': {
       'ko': 'Search for Books',
       'en': '',
     },
-    'kms8n0mp': {
+    'ya8e1p1q': {
       'ko': 'Find amazing classic books in our library.',
       'en': '',
     },
-    'pyeiyl8k': {
+    'asmqsslu': {
       'ko': 'Purchase Books',
       'en': '',
     },
-    '35jhpyxe': {
+    'ei3krnmq': {
       'ko': 'Buy and view all your favorite books you find in this library.',
       'en': '',
     },
-    't8sdsjd2': {
+    'wyl56iyc': {
       'ko': 'Review Purchases',
       'en': '',
     },
-    'mlzghf6q': {
+    'z6ddyhso': {
       'ko':
           'Keep track of all your purchases that you have made, want to trade books in? Go ahead and list them for exchange.',
       'en': '',
     },
-    '6rxbgdez': {
+    '1suzmbeb': {
       'ko': 'Continue',
       'en': '',
     },
+    'lv7embhp': {
+      'ko': 'Home',
+      'en': '',
+    },
   },
-  // login_step_screen
+  // loginStep1
   {
     'qte7ics1': {
       'ko': 'Login',
@@ -100,7 +108,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'OR',
     },
     'd2m1wale': {
-      'ko': '바린이 가입',
+      'ko': '바린이되기',
       'en': 'Sign up',
     },
     'jubs4laq': {
@@ -112,7 +120,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // login_screen
+  // loginStep2
   {
     'zdfkxpxt': {
       'ko': '로그인',
@@ -139,37 +147,104 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // createAccount
+  // createAccountStep1
+  {
+    '2s0zb749': {
+      'ko': '함께 라이딩 떠나요!',
+      'en': 'Let&#39;s go riding together!',
+    },
+    'bd0kjdkh': {
+      'ko': '서비스 이용약관에 동의해주세요.',
+      'en': 'Please agree to the Terms of Service.',
+    },
+    'adc385qy': {
+      'ko': '[필수] 이용약관 동의',
+      'en': '[Required] Accept the terms of use',
+    },
+    'kxrlghc9': {
+      'ko': '[필수] 개인정보처리방침 동의',
+      'en': '[Required] Agree to the Privacy Policy',
+    },
+    '8q2tuj08': {
+      'ko': '[필수] 위치기반 서비스약관 동의',
+      'en': '[Required] Agree to location-based terms of service',
+    },
+    'yyn6wbkr': {
+      'ko': '전체 동의합니다.',
+      'en': 'I totally agree.',
+    },
+    '4nhmw41c': {
+      'ko': '다음',
+      'en': 'next',
+    },
+    'siygdj4w': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // createAccountStep2
   {
     '2u0fd8ai': {
       'ko': '함께 라이딩 떠나요!',
       'en': 'Let&#39;s go riding together!',
     },
     '090iiors': {
-      'ko': 'Create your account below, or',
-      'en': 'Create your account below, or',
+      'ko': '아래 정보를 입력해주세요',
+      'en': 'Please enter the information below',
     },
     'o9hyp43k': {
-      'ko': 'Your email...',
+      'ko': '이메일',
       'en': 'Your email...',
     },
     'nor2r18z': {
-      'ko': 'Password',
+      'ko': '비밀번호',
       'en': 'Password',
     },
-    'mexcuxjq': {
-      'ko': 'Create Account',
-      'en': 'Create Account',
-    },
-    '0jklhsqk': {
-      'ko': 'Continue as guest',
-      'en': 'Continue as guest',
+    'zh0ht3b5': {
+      'ko': '영문,숫자,특수문자 2자리 조합 10자리',
+      'en': '10 alphanumeric characters and 2 special characters',
     },
     'xswmmc3q': {
-      'ko': 'Password',
+      'ko': '비밀번호 확인',
       'en': 'Password',
     },
+    'ugkpcfou': {
+      'ko': '영문,숫자,특수문자 2자리 조합 10자리',
+      'en': '10 alphanumeric characters and 2 special characters',
+    },
+    'vba80pef': {
+      'ko': '바린이에서 쓰실 닉네임',
+      'en': 'nickname',
+    },
+    'c2wkvze5': {
+      'ko': '가입하기',
+      'en': 'sign up',
+    },
     'exrrmy1k': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // verifyPhone
+  {
+    'sffeheuh': {
+      'ko': '전화번호 인증하기',
+      'en': 'Verify your phone number',
+    },
+    'nynff0z3': {
+      'ko': '휴대폰 번호를 입력해주세요.',
+      'en': 'Please enter your mobile phone number.',
+    },
+    'lb8m91ga': {
+      'ko': '비밀번호 재설정을 위하여 기입하신 이메일로 링크가 첨부된 메일을 보내드립니다. ',
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
+    },
+    'd9i1qsea': {
+      'ko': '인증하기',
+      'en': 'Authenticate',
+    },
+    'ygct7soc': {
       'ko': 'Home',
       'en': 'Home',
     },
@@ -194,51 +269,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Send Reset Link',
     },
     '7sk8kb2v': {
-      'ko': 'Home',
-      'en': 'Home',
-    },
-  },
-  // profile_step1_screen
-  {
-    '0z2dvtsr': {
-      'ko': 'Dog Profile',
-      'en': 'Dog Profile',
-    },
-    'm49hsrtb': {
-      'ko': '1/2',
-      'en': '1/2',
-    },
-    'sfga0h32': {
-      'ko':
-          'Fill out your dog profiles below! And then get to sharing your pups!',
-      'en':
-          'Fill out your dog profiles below! And then get to sharing your pups!',
-    },
-    'k0dkgmnd': {
-      'ko': 'Dog Name',
-      'en': 'Dog Name',
-    },
-    'qzurhb5u': {
-      'ko': 'Dog Breed',
-      'en': 'Dog Breed',
-    },
-    'g6wtzsp6': {
-      'ko': 'Dog Age',
-      'en': 'Dog Age',
-    },
-    'aa4renl3': {
-      'ko': 'You can add multiple pups in your profile.',
-      'en': 'You can add multiple pups in your profile.',
-    },
-    'zlkia0xx': {
-      'ko': 'Skip',
-      'en': 'Skip',
-    },
-    'pmj0cxab': {
-      'ko': 'Save & Continue',
-      'en': 'Save &amp; Continue',
-    },
-    'h7neub4p': {
       'ko': 'Home',
       'en': 'Home',
     },
@@ -284,6 +314,51 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save &amp; Continue',
     },
     'q009s8ac': {
+      'ko': 'Home',
+      'en': 'Home',
+    },
+  },
+  // profile_step1_screen
+  {
+    '0z2dvtsr': {
+      'ko': 'Dog Profile',
+      'en': 'Dog Profile',
+    },
+    'm49hsrtb': {
+      'ko': '1/2',
+      'en': '1/2',
+    },
+    'sfga0h32': {
+      'ko':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+      'en':
+          'Fill out your dog profiles below! And then get to sharing your pups!',
+    },
+    'k0dkgmnd': {
+      'ko': 'Dog Name',
+      'en': 'Dog Name',
+    },
+    'qzurhb5u': {
+      'ko': 'Dog Breed',
+      'en': 'Dog Breed',
+    },
+    'g6wtzsp6': {
+      'ko': 'Dog Age',
+      'en': 'Dog Age',
+    },
+    'aa4renl3': {
+      'ko': 'You can add multiple pups in your profile.',
+      'en': 'You can add multiple pups in your profile.',
+    },
+    'zlkia0xx': {
+      'ko': 'Skip',
+      'en': 'Skip',
+    },
+    'pmj0cxab': {
+      'ko': 'Save & Continue',
+      'en': 'Save &amp; Continue',
+    },
+    'h7neub4p': {
       'ko': 'Home',
       'en': 'Home',
     },
@@ -692,23 +767,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // phone_sign_screen
   {
-    '4zb8e69z': {
+    'gfhjfisw': {
       'ko': 'Phone Sign In',
       'en': '',
     },
-    '3q6sncw7': {
+    'ck8tzu8f': {
+      'ko': 'Your Phone Number',
+      'en': '',
+    },
+    '2cuxlnhx': {
+      'ko': 'Please enter a valid number...',
+      'en': '',
+    },
+    'm3adtrt9': {
       'ko': 'Sign In with Phone',
+      'en': '',
+    },
+    '5xq6alfc': {
+      'ko': 'Home',
       'en': '',
     },
   },
   // phone_verify_screen
   {
-    '2yu1eo6k': {
+    '5mcv11gn': {
       'ko': 'Code Verification',
       'en': '',
     },
-    '52o8ol2a': {
+    'lppcvg6z': {
+      'ko': 'Enter the 6 digit code',
+      'en': '',
+    },
+    'qtt1q80n': {
+      'ko': '000000',
+      'en': '',
+    },
+    'oh6rya53': {
       'ko': 'Verify Code',
+      'en': '',
+    },
+    'hk8v6eri': {
+      'ko': 'Home',
       'en': '',
     },
   },

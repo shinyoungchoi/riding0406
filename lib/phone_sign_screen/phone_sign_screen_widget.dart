@@ -72,12 +72,14 @@ class _PhoneSignScreenWidgetState extends State<PhoneSignScreenWidget> {
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
+                  labelText: 'Your Phone Number',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0x98FFFFFF),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
+                  hintText: 'Please enter a valid number...',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0x98FFFFFF),

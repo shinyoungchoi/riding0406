@@ -49,7 +49,7 @@ dependencies:
   flutter_google_places: 0.3.0
   flutter_svg: 0.22.0
   font_awesome_flutter: 8.11.0
-  google_fonts: 2.1.0
+  google_fonts: 2.2.0
   google_mobile_ads:
     git:
       url: https://github.com/asmengistu/googleads-mobile-flutter

@@ -73,12 +73,14 @@ class _PhoneVerifyScreenWidgetState extends State<PhoneVerifyScreenWidget> {
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
+                  labelText: 'Enter the 6 digit code',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0x98FFFFFF),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
+                  hintText: '000000',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0x98FFFFFF),

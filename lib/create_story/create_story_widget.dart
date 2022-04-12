@@ -64,18 +64,20 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                             pickerFontFamily: 'Lexend Deca',
                           );
                           if (selectedMedia != null &&
-                              validateFileFormat(
-                                  selectedMedia.storagePath, context)) {
+                              selectedMedia.every((m) =>
+                                  validateFileFormat(m.storagePath, context))) {
                             showUploadMessage(
                               context,
                               'Uploading file...',
                               showLoading: true,
                             );
-                            final downloadUrl = await uploadData(
-                                selectedMedia.storagePath, selectedMedia.bytes);
+                            final downloadUrls = await Future.wait(
+                                selectedMedia.map((m) async =>
+                                    await uploadData(m.storagePath, m.bytes)));
                             ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                            if (downloadUrl != null) {
-                              setState(() => uploadedFileUrl1 = downloadUrl);
+                            if (downloadUrls != null) {
+                              setState(
+                                  () => uploadedFileUrl1 = downloadUrls.first);
                               showUploadMessage(
                                 context,
                                 'Success!',
@@ -259,18 +261,20 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                           pickerFontFamily: 'Lexend Deca',
                         );
                         if (selectedMedia != null &&
-                            validateFileFormat(
-                                selectedMedia.storagePath, context)) {
+                            selectedMedia.every((m) =>
+                                validateFileFormat(m.storagePath, context))) {
                           showUploadMessage(
                             context,
                             'Uploading file...',
                             showLoading: true,
                           );
-                          final downloadUrl = await uploadData(
-                              selectedMedia.storagePath, selectedMedia.bytes);
+                          final downloadUrls = await Future.wait(
+                              selectedMedia.map((m) async =>
+                                  await uploadData(m.storagePath, m.bytes)));
                           ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                          if (downloadUrl != null) {
-                            setState(() => uploadedFileUrl2 = downloadUrl);
+                          if (downloadUrls != null) {
+                            setState(
+                                () => uploadedFileUrl2 = downloadUrls.first);
                             showUploadMessage(
                               context,
                               'Success!',
@@ -333,18 +337,20 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                           allowVideo: true,
                         );
                         if (selectedMedia != null &&
-                            validateFileFormat(
-                                selectedMedia.storagePath, context)) {
+                            selectedMedia.every((m) =>
+                                validateFileFormat(m.storagePath, context))) {
                           showUploadMessage(
                             context,
                             'Uploading file...',
                             showLoading: true,
                           );
-                          final downloadUrl = await uploadData(
-                              selectedMedia.storagePath, selectedMedia.bytes);
+                          final downloadUrls = await Future.wait(
+                              selectedMedia.map((m) async =>
+                                  await uploadData(m.storagePath, m.bytes)));
                           ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                          if (downloadUrl != null) {
-                            setState(() => uploadedFileUrl3 = downloadUrl);
+                          if (downloadUrls != null) {
+                            setState(
+                                () => uploadedFileUrl3 = downloadUrls.first);
                             showUploadMessage(
                               context,
                               'Success!',
