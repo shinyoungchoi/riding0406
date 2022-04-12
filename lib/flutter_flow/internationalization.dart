@@ -44,51 +44,51 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboard
   {
-    '43jhgdnn': {
+    '112my797': {
       'ko': 'Welcome to Flutterflow',
       'en': '',
     },
-    'd1fzc4si': {
+    'pi69p7oc': {
       'ko': 'Build Apps Effortlessly',
       'en': '',
     },
-    '5ank9p9f': {
+    'ggt5qmr6': {
       'ko': 'Home',
       'en': '',
     },
   },
   // onboard2
   {
-    'blr4nqv5': {
+    'gsydlht9': {
       'ko': 'Search for Books',
       'en': '',
     },
-    'ya8e1p1q': {
+    'igsykohq': {
       'ko': 'Find amazing classic books in our library.',
       'en': '',
     },
-    'asmqsslu': {
+    '0tegr7v8': {
       'ko': 'Purchase Books',
       'en': '',
     },
-    'ei3krnmq': {
+    'kztat36l': {
       'ko': 'Buy and view all your favorite books you find in this library.',
       'en': '',
     },
-    'wyl56iyc': {
+    'oarbscft': {
       'ko': 'Review Purchases',
       'en': '',
     },
-    'z6ddyhso': {
+    '0wwaie60': {
       'ko':
           'Keep track of all your purchases that you have made, want to trade books in? Go ahead and list them for exchange.',
       'en': '',
     },
-    '1suzmbeb': {
+    'vcpsqbbb': {
       'ko': 'Continue',
       'en': '',
     },
-    'lv7embhp': {
+    'gwyethok': {
       'ko': 'Home',
       'en': '',
     },
@@ -767,46 +767,46 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // phone_sign_screen
   {
-    'gfhjfisw': {
+    'f9ol5glu': {
       'ko': 'Phone Sign In',
       'en': '',
     },
-    'ck8tzu8f': {
+    '7ctllu74': {
       'ko': 'Your Phone Number',
       'en': '',
     },
-    '2cuxlnhx': {
+    'rut1f4pf': {
       'ko': 'Please enter a valid number...',
       'en': '',
     },
-    'm3adtrt9': {
+    'ry335zc3': {
       'ko': 'Sign In with Phone',
       'en': '',
     },
-    '5xq6alfc': {
+    'kwtw1mzr': {
       'ko': 'Home',
       'en': '',
     },
   },
   // phone_verify_screen
   {
-    '5mcv11gn': {
+    'lhckfyth': {
       'ko': 'Code Verification',
       'en': '',
     },
-    'lppcvg6z': {
+    '5j6fixss': {
       'ko': 'Enter the 6 digit code',
       'en': '',
     },
-    'qtt1q80n': {
+    'ldure6zp': {
       'ko': '000000',
       'en': '',
     },
-    'oh6rya53': {
+    'arkj10gm': {
       'ko': 'Verify Code',
       'en': '',
     },
-    'hk8v6eri': {
+    'hptg3l3e': {
       'ko': 'Home',
       'en': '',
     },
